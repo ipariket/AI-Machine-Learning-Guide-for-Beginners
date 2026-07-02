@@ -30,7 +30,7 @@ Okay, now we have a line on a graph. Let's plot some data on it — say x is num
 
 We want to draw the line in such a way that the distance between all the data points we plotted and that specific line is as small as possible. For every point, we calculate the distance between that point and the line — this is the "error" for that point, because the model (our line) doesn't pass exactly through the actual data. Since there are many points, we need to combine all these errors into one number.
 
-Here's the part I had backwards before, so let me be precise about the order: for each point, we take its error and square it first (squaring makes any negative errors positive, so they don't cancel out with positive ones). Then we take the average of all those squared errors. That's why it's literally called Mean Squared Error (MSE) — square each one, then average, not the other way around.
+let me be precise about the order: for each point, we take its error and square it first (squaring makes any negative errors positive, so they don't cancel out with positive ones). Then we take the average of all those squared errors. That's why it's literally called Mean Squared Error (MSE) — square each one, then average, not the other way around.
 
 Our goal is to find the m and b that make this Mean Squared Error as small as possible. This is a minimization problem, so it involves the idea of maxima and minima from calculus — we take the derivative of the MSE with respect to m and b, and find where that derivative equals zero, since that's where the error is at its minimum (the bottom of the curve, like the bottom of a bowl shape).
 
